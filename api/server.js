@@ -7,7 +7,7 @@ const server = express();
 server.use(helmet());
 
 server.get("/", (req, res) => {
-    res.status(200).json({ message: "Server is up!"});
+    res.status(200).json({ message: "Server is up!",  testObject: process.env.TEST});
 });
 
 module.exports = server;
