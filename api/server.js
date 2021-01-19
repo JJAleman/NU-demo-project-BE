@@ -17,7 +17,7 @@ server.use('/api/auth', authRouter);
 server.use('/api/users', usersRouter);
 
 server.get("/", (req, res) => {
-    res.status(200).json({ message: "Server is up!",  testObject: process.env.TEST});
+    res.status(200).json({ message: "Server is up!"});
 });
 
 module.exports = server;

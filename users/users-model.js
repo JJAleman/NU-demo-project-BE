@@ -1,4 +1,4 @@
-const db = require('../data/db.config.js');
+const db = require('../data/dbconfig.js');
 
 module.exports = {
     add,
@@ -16,14 +16,13 @@ function findBy(filter) {
 }
 
 function add(user) {
-    // console.log("IN MODEL USER:", user)
+    console.log("Adding user!")
     return db('users').insert(user);
      
 }
 
 function findById(id) {
-    // console.log("IN FIND BY ID:", id)
     return db('users')
-    .where("id", id)
+    .where({id})
     .first();
 }
