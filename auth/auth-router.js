@@ -16,6 +16,7 @@ router.post("/register", authReg, (req, res) => {
       res.status(201).json({
         message: "User saved",
         saved,
+        token: token
       });
     })
     .catch((error) => {
